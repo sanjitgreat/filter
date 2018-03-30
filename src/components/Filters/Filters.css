@@ -1,0 +1,87 @@
+.filterwrapper {
+  min-width: 200px;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  max-height: 52px;
+  z-index: 9;
+  overflow: hidden;
+}
+.filterwrapper__selectedfilter {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+.filterwrapper__selectedfilter--down {
+  position: absolute;
+  margin: 6px 0 0 10px;
+  width: 0;
+  height: 0;
+  right: 20px;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #212121 transparent transparent transparent;
+}
+.filterwrapper__itemcontainer__item {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  padding: 10px 20px;
+  background: #fff;
+  word-wrap: break-word;
+  position: relative;
+}
+.filterwrapper__itemcontainer__item:hover {
+  color: #7ec23a;
+  background: #fafafa;
+}
+.filterwrapper__itemcontainer__item.active {
+  color: #616161;
+  background: #eee;
+}
+.filterwrapper__itemcontainer__item .count {
+  right: 20px;
+  font-size: 10px;
+  color: #555;
+  position: absolute;
+  top: 12px;
+}
+.filterwrapper.showDropdown {
+  max-height: 1000px;
+  background: #fff;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+.filterwrapper.showDropdown .filterwrapper__selectedfilter {
+  border-bottom: 2px solid #fafafa;
+}
+.filterwrapper.showDropdown .filterwrapper__selectedfilter--down {
+  position: absolute;
+  margin: 6px 0 0 10px;
+  width: 0;
+  height: 0;
+  right: 20px;
+  border-style: solid;
+  border-width: 0px 5px 6px 5px;
+  border-color: transparent transparent #212121 transparent;
+}
+
+@media only screen and (max-width: 600px) {
+  .filterwrapper {
+    position: relative;
+    top: 0;
+  }
+}
